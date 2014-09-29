@@ -1,4 +1,4 @@
-#bin/sh
+#!bin/sh
 
 mkdir output
 touch 1.txt
