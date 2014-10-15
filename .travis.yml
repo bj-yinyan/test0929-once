@@ -21,7 +21,6 @@ install:
 
 #script: tox -e $TOX_ENV
 script:
-    - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake tests:integration || false'
     - sh ex1.sh
     - sh ex2.sh
 
