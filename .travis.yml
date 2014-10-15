@@ -4,12 +4,16 @@ branches:
     only:
         - master
 
-matrix:
-    include:
-        - python: 2.6
-          env: {TOX_ENV: py26}
-        - python: 2.7
-          env: {TOX_ENV: py27, COVERAGE: 1}
+env:
+    - var=units
+    - var=intergrations
+
+#matrix:
+#    include:
+#        - python: 2.6
+#          env: {TOX_ENV: py26}
+#        - python: 2.7
+#          env: {TOX_ENV: py27, COVERAGE: 1}
 
 install:
     - travis_retry sudo apt-get update
@@ -22,6 +26,7 @@ install:
 script:
     - sh ex1.sh
     - sh ex2.sh
+    - "echo $var"
 
 # coveralls.io reporting, using https://github.com/coagulant/coveralls-python
 # Only report coverage for one version.
