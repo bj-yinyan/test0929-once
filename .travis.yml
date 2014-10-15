@@ -28,11 +28,11 @@ script:
 after_success:
     - "[ ! -z $COVERAGE ] && coveralls || true"
 
-notifications:
-    irc:
-        channels:
-            - "irc.freenode.org#beets"
-        use_notice: true
-        skip_join: true
-        on_success: change
-        on_failure: always
+#notifications:
+    #irc:
+        #channels:
+        #    - "irc.freenode.org#beets"
+        #use_notice: true
+        #skip_join: true
+    #    on_success: change
+    #    on_failure: always
