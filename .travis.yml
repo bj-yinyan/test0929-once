@@ -16,10 +16,10 @@ install:
     - travis_retry sudo apt-get install -qq bash-completion mp3gain
     - travis_retry pip install tox sphinx
     - "[ ! -z $COVERAGE ] && pip install coveralls || true"
+    - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake tests:integration || false'
 
 #script: tox -e $TOX_ENV
 script:
-    - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake tests:integration || false'
     - sh ex1.sh
     - sh ex2.sh
 
