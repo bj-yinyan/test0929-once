@@ -17,7 +17,7 @@ install:
     - travis_retry pip install tox sphinx
     - travis_retry sudo apt-get bundle
     - "[ ! -z $COVERAGE ] && pip install coveralls || true"
-    - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake tests:integration || false'
+    - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && echo "hello travis, hello github." || false'
 
 #script: tox -e $TOX_ENV
 script:
@@ -29,7 +29,8 @@ script:
 after_success:
     - "[ ! -z $COVERAGE ] && coveralls || true"
 
-#notifications:
+notifications:
+    email: "yygoto0515@163.com"
     #irc:
         #channels:
         #    - "irc.freenode.org#beets"
