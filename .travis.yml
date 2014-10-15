@@ -28,8 +28,8 @@ script:
 after_success:
     - "[ ! -z $COVERAGE ] && coveralls || true"
 
-notifications:
-    email: "yygoto0515@163.com"
+#notifications:
+#    email: "yygoto0515@163.com"
     #irc:
         #channels:
         #    - "irc.freenode.org#beets"
