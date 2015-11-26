@@ -6,7 +6,7 @@ branches:
 
 env:
     - var=units
-    - var=intergrations
+#    - var=intergrations
 
 #matrix:
 #    include:
