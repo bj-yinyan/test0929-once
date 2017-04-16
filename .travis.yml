@@ -3,6 +3,8 @@ language: python
 branches:
     only:
         - master
+        - test0929-1
+        - test0929
 
 env:
     - var=units
