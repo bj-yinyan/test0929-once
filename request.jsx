@@ -9,6 +9,7 @@ import {isObject} from 'lodash';
 import {partial, omitBy, omit, isEmpty} from 'lodash/fp';
 import {stringifyQuery} from './queryString';
 import {resolveURL} from './url';
+import {resolveURL} from './url';
 
 const purify = omitBy(value => value == null);
 
