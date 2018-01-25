@@ -1,0 +1,6 @@
+[submodule "test20161130"]
+	path = test20161130
+	url = git@github.com:bj-yinyan/test20161130.git
+[submodule "test20151201-alias"]
+	path = test20151201-alias
+	url = git@github.com:bj-yinyan/test20151201.git
