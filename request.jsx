@@ -5,8 +5,10 @@
 
 import axios from 'axios';
 import {Modal} from 'antd';
+import {isObject} from 'lodash';
 import {partial, omitBy, omit, isEmpty} from 'lodash/fp';
 import {stringifyQuery} from './queryString';
+import {resolveURL} from './url';
 import {resolveURL} from './url';
 
 const purify = omitBy(value => value == null);
@@ -96,7 +98,7 @@ export const request = (method, rawURL, rawData, {unwrapResponse = defaultUnwrap
 
     if (rawData) {
         // `null`或`undefined`的参数默认不发送
-        const data = purify(rawData);
+        const data = isObject(rawData) ? purify(rawData) : rawData;
         const key = method === 'GET' ? 'params' : 'data';
         config[key] = data;
     }
